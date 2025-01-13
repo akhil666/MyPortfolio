@@ -22,8 +22,8 @@ const Services = () => {
                         {description}
                     </p>
                     <a href={link} className='flex items-center gap-2 text-sm mt-5'>
-                        Read more <Image alt='' src={assets.right_arrow} className='w-4'/>
-                    </a>
+                         <Image alt='' src={assets.right_arrow} className='w-4'/>
+                    </a> 
                 </motion.div>
             ))}
 

@@ -14,7 +14,7 @@ const Header = () => {
     <motion.h1 initial= {{y: -30 , opacity: 0 }} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.8, delay:0.5}} className='text=3xl sm:text-6xl lg:text-[66px] font-Ovo'>
         Full Stack Developer based in Kerala.</motion.h1>
         <motion.p initial= {{opacity: 0 }} whileInView={{opacity: 1}} transition={{duration: 0.6, delay:0.7}} className=' max-w-2xl mx-auto font-'>
-        I am a Full Stack Developer based in Thiruvananthapuram, Kerala, with 1 year of experience as a Software Developer at the Digital University of Kerala and over 2 years of experience as a freelance Full Stack Developer. 
+        I am an experienced Full Stack Developer with over a 3+ years of Experience in this field. Throughout my career, I have had the privilege of collaborating with prestigious organization, contributing to their success and growth. 
         </motion.p>
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
             <motion.a initial= {{y: 30 , opacity: 0 }} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.6, delay:0.1}}  href='#contact' className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'>contact me <Image src={assets.right_arrow_white} alt='' className='w-4' />

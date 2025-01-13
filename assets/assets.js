@@ -78,23 +78,23 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: '8-Bit Fitness App',
+        description: 'Mobile App',
         bgImage: '/work-1.png',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'Travel Buddy',
+        description: 'Mobile App & webiste ',
         bgImage: '/work-2.png',
     },
     {
-        title: 'Photography site',
+        title: 'Travelogue ',
         description: 'Web Design',
         bgImage: '/work-3.png',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
+        title: 'Cognizance',
+        description: 'UI/UX Design for a Workshop Webstie',
         bgImage: '/work-4.png',
     },
 ]
@@ -103,7 +103,7 @@ export const serviceData = [
     { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
     { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
     { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.graphics_icon, title: 'Software Development', description: 'Dynamic web applications, solving complex problems, and delivering impactful solutions....', link: '' },
 ]
 
 export const infoList = [

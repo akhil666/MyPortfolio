@@ -15,7 +15,7 @@ const About = ({isDarkMode}) => {
         </motion.div>
         <motion.div initial = {{opacity:0}} whileInView={{opacity:1}} transition={{duration:0.6,delay:0.8}} className='flex-1'>
         <p className='mb-10 max-w-2xl font-Ovo'>
-            I am an experienced Full Stack Developer with over a 3+ years of Experience in this field. Throughout my career, I have had the privilege of collaborating with prestigious organization, contributing to their success and growth.
+        Hi, I’m Akhil S Vijay, a tech enthusiast with expertise in data analytics, software development, and full-stack web development. Holding a Master’s in Computer Science from CUSAT, I specialize in building responsive web applications with Python, Django, and React. My hands-on experience includes software development, database design, and API integration, equipping me to manage projects end-to-end efficiently. Explore my work and let’s collaborate to bring innovative ideas to life!
         </p>
 
         <motion.ul initial = {{opacity:0}} whileInView={{opacity:1}} transition={{duration:0.8, delay:1}} className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
