@@ -1,174 +1,113 @@
 // ----------------------------------------------------------------------------
-//  Central content — sourced directly from Akhil S Vijay's resume.
+//  Central content — sourced from Akhil S Vijay's resume.
 // ----------------------------------------------------------------------------
 
 export const profile = {
   name: "Akhil S Vijay",
+  initials: "AV",
   role: "Forward Deployment Engineer",
-  tagline: "Full Stack & Data Professional",
   location: "Thiruvananthapuram, Kerala",
-  status: "Open to Forward Deployed roles",
   email: "akhilsvijay9@gmail.com",
   phone: "+91 94959 88981",
-  resume: "/sample-resume.pdf", // replace with your latest resume PDF in /public
+  resume: "/sample-resume.pdf",
+  github: "https://github.com/akhil666",
   linkedin: "https://www.linkedin.com/in/akhil-s-vijay/",
   portfolio: "https://akhil-s-vijay.vercel.app/",
-  headline:
-    "I deploy scalable web apps, AI-enabled platforms, and analytics solutions straight into client environments.",
-  summary:
-    "Versatile Forward Deployment Engineer and Full Stack Data Professional specializing in deploying scalable web applications, AI-enabled platforms, and advanced analytics solutions into client environments. Experienced in Python, Django, SQL, React, and Databricks, with a strong track record of translating business requirements into high-performance technical solutions, automating workflows, and driving end-to-end project delivery.",
 };
 
-// whoami terminal output shown in the hero
-export const terminalLines = [
-  { prompt: true, text: "akhil@fde ~ % whoami" },
-  { text: "Forward Deployment Engineer · Full Stack + Data" },
-  { prompt: true, text: "akhil@fde ~ % cat stack.txt" },
-  { text: "python · django · react · next · sql · databricks" },
-  { prompt: true, text: "akhil@fde ~ % ./deploy --to client-env" },
-  { text: "✓ onboarded · ✓ integrated · ✓ in production", accent: true },
+export const hero = {
+  badge: "AVAILABLE FOR WORK · KERALA, IN",
+  lead:
+    "I'm Akhil — a Forward Deployment Engineer & full-stack data professional. I deploy scalable web apps, AI-enabled platforms, and analytics solutions into client environments, across Python, Django, React, Next.js, SQL & Databricks.",
+  metaEyebrow: "EST. KERALA, IN · MSc @ CUSAT",
+  metaStat: "4+ years · 12+ projects shipped",
+  metaDesc:
+    "Web apps, APIs, data pipelines and AI workflows — built for clarity, scale and impact.",
+};
+
+export const navLinks = [
+  { href: "#about", label: "about" },
+  { href: "#work", label: "work" },
+  { href: "#experience", label: "experience" },
+  { href: "#process", label: "process" },
+  { href: "#stack", label: "stack" },
 ];
 
-// All metrics below are pulled from the resume.
-export const stats = [
-  { value: "4+", label: "Years across software & data" },
-  { value: "5,000+", label: "Concurrent users supported" },
-  { value: "40%", label: "App performance improvement" },
-  { value: "50%", label: "Less manual reporting effort" },
+export const marqueeWords = [
+  "PYTHON", "DJANGO", "REACT", "NEXT.JS", "SQL", "DATABRICKS",
+  "PYSPARK", "MONGODB", "OPENAI API", "SUPABASE", "ALTERYX", "REST APIs",
 ];
 
-// The Forward Deployed working loop
-export const workflow = [
-  {
-    icon: "embed",
-    step: "01",
-    title: "Embed with stakeholders",
-    description:
-      "Work directly with clients to convert business logic and requirements into a clear, scalable technical plan.",
-  },
-  {
-    icon: "prototype",
-    step: "02",
-    title: "Build the solution",
-    description:
-      "Develop end-to-end across frontend, backend, APIs, and data — from interfaces to AI-assisted workflows.",
-  },
-  {
-    icon: "deploy",
-    step: "03",
-    title: "Deploy into the client env",
-    description:
-      "Integrate with their stack and cloud, ensuring seamless onboarding and stable production delivery.",
-  },
-  {
-    icon: "enable",
-    step: "04",
-    title: "Optimize & hand off",
-    description:
-      "Tune performance and usability, automate the manual work, and keep the platform reliable over time.",
-  },
+// Animated counters — all values from the resume.
+export const facts = [
+  { value: 4, suffix: "+", label: "YEARS EXPERIENCE" },
+  { value: 5000, suffix: "+", label: "CONCURRENT USERS SUPPORTED" },
+  { value: 40, suffix: "%", label: "PERFORMANCE IMPROVEMENT" },
+  { value: 50, suffix: "%", label: "LESS MANUAL REPORTING" },
 ];
 
-export const skills = [
-  {
-    icon: "code",
-    title: "Languages",
-    items: ["Python", "JavaScript", "SQL"],
-  },
-  {
-    icon: "layers",
-    title: "Frameworks & Libraries",
-    items: ["Django", "React.js", "Next.js", "REST APIs", "TailwindCSS", "ShadCN"],
-  },
-  {
-    icon: "database",
-    title: "Databases & Platforms",
-    items: ["PostgreSQL", "MySQL", "MongoDB", "Supabase"],
-  },
-  {
-    icon: "spark",
-    title: "Data & Analytics",
-    items: ["Databricks", "Apache Spark / PySpark", "Alteryx", "Tableau", "ML & Statistics"],
-  },
-  {
-    icon: "cloud",
-    title: "Integrations & Tools",
-    items: ["OpenAI API", "Clerk Auth", "Excel (Pivot, VLOOKUP)", "Shopify (Liquid, CSV)"],
-  },
-];
+export const about = {
+  paragraph:
+    "I deploy scalable web applications, AI-enabled platforms, and advanced analytics solutions into client environments. With a foundation in both full-stack development and data analytics, I'm as comfortable building data pipelines in Databricks as I am shipping a clean React front end — turning business requirements into high-performance technical solutions.",
+  rows: [
+    { k: "EDUCATION", v: "MSc Computer Science — Data Analytics, CUSAT" },
+    { k: "EXPERIENCE", v: "4+ years · FDE & full-stack data" },
+    { k: "CERTIFICATION", v: "Alteryx Designer Core Certified" },
+    { k: "BASED IN", v: "Thiruvananthapuram, Kerala · open to remote" },
+  ],
+};
 
-// Tools shown as a text row
-export const toolbelt = [
-  "Python",
-  "Django",
-  "React",
-  "Next.js",
-  "SQL",
-  "Databricks",
-  "PySpark",
-  "MongoDB",
-  "PostgreSQL",
-  "OpenAI API",
-  "Supabase",
-  "Alteryx",
-];
-
-// Case studies built from real resume projects.  problem → approach → impact.
-export const caseStudies = [
+// Featured projects (real GitHub repos / resume projects).
+export const projects = [
   {
-    name: "JobsPorch",
-    kind: "Full-Stack Job Marketplace",
-    year: "2025",
-    problem:
-      "Hiring operations were fragmented across recruiters, candidates, and admins with no unified, real-time workflow.",
-    approach:
-      "Built a job marketplace with recruiter/candidate/admin approval pipelines, secure in-browser video-interview recording on Supabase storage, and SQL-backed real-time analytics.",
-    impact: "End-to-end hiring, streamlined into one platform",
-    stack: ["Next.js 15", "React 19", "Tailwind", "ShadCN", "MongoDB", "Supabase"],
+    title: "JobsPorch",
+    tag: "FULL-STACK MARKETPLACE",
+    image: "/work-1.png",
+    desc: "A full-stack job marketplace with recruiter, candidate & admin workflows, approval pipelines, and secure in-browser video interviews backed by Supabase storage.",
+    stack: ["Next.js 15", "React 19", "MongoDB", "Supabase"],
+    link: "https://github.com/akhil666/JOBSPORCH",
   },
   {
-    name: "AI-Enabled Analytics Platform",
-    kind: "Forward Deployed Engagement",
-    year: "2026",
-    problem:
-      "Clients needed AI-assisted enterprise workflows deployed and running inside their own environments.",
-    approach:
-      "Owned end-to-end implementation across frontend, backend services, APIs, and cloud data-sync — with OpenAI API integrations for customized AI-assisted workflows.",
-    impact: "Seamless onboarding & stable production delivery",
-    stack: ["Python", "Django", "React", "Next.js", "OpenAI API", "SQL"],
+    title: "8-Bit Fitness App",
+    tag: "WEB + MOBILE APP",
+    image: "/work-2.png",
+    desc: "A customizable fitness app for small businesses, with a client-configurable chatbot and voice features via the Web Speech API.",
+    stack: ["Python", "Django", "React", "REST API"],
+    link: "https://github.com/akhil666/8-BitFitness-APP",
   },
   {
-    name: "Audit-Ready Data Pipelines",
-    kind: "EY — Ernst & Young",
-    year: "2025",
-    problem:
-      "High-volume financial datasets required reliable, audit-ready cleansing and transformation under strict timelines.",
-    approach:
-      "Engineered automated cleansing and transformation pipelines in Databricks (SQL/PySpark) and Alteryx Designer, plus audit-ready analytical and reporting models.",
-    impact: "Improved data reliability, less manual intervention",
-    stack: ["Databricks", "PySpark", "SQL", "Alteryx"],
+    title: "Real Estate Platform",
+    tag: "WEB APP",
+    image: "/work-3.png",
+    desc: "A responsive real-estate website with property listings and a clean, modern browsing experience.",
+    stack: ["Next.js", "Tailwind", "React"],
+    link: "https://github.com/akhil666/real-estate-next",
   },
   {
-    name: "Scalable Django Platform",
-    kind: "One Team Solutions",
-    year: "2023",
-    problem:
-      "A growing web application had to stay fast and reliable for thousands of simultaneous users.",
-    approach:
-      "Built scalable Django apps and REST APIs, optimized SQL queries and backend workflows, and automated Excel-based reporting in Python.",
-    impact: "5,000+ concurrent users · +40% performance · −50% manual reporting",
-    stack: ["Python", "Django", "REST APIs", "SQL"],
+    title: "Travelogue",
+    tag: "WEB DESIGN",
+    image: "/work-4.png",
+    desc: "A travel-focused web experience with map-driven location discovery and editorial layouts.",
+    stack: ["React", "UI/UX", "HTML/CSS"],
+    link: "https://github.com/akhil666",
   },
 ];
 
-// Experience timeline (reverse chronological, from resume)
+export const moreRepos = [
+  { num: "05", title: "AI Analytics Platform", desc: "AI-assisted enterprise workflows (OpenAI API)", lang: "PYTHON/AI", link: "https://github.com/akhil666" },
+  { num: "06", title: "Web Scraping Suite", desc: "Full-site data extraction with Python", lang: "PYTHON", link: "https://github.com/akhil666/Web-scrapping" },
+  { num: "07", title: "Inventory Forecasting", desc: "Pandas inventory tables & charts", lang: "PYTHON", link: "https://github.com/akhil666" },
+  { num: "08", title: "Solar", desc: "Energy / solar project", lang: "JS", link: "https://github.com/akhil666/Solar" },
+];
+
+// Experience timeline — from the resume (reverse chronological).
 export const experience = [
   {
     role: "Forward Deployment Engineer",
     org: "Independent Client Work (Freelance)",
     period: "Mar 2026 — Present",
     points: [
-      "Led deployment and integration of AI-enabled solution and analytics platforms into client environments with stable production delivery.",
+      "Led deployment and integration of AI-enabled solution and analytics platforms into client environments, ensuring seamless onboarding and stable production delivery.",
       "Managed end-to-end implementation across frontend, backend services, APIs, and cloud-based data synchronization.",
       "Worked across Python, Django, React, Next.js, SQL, and OpenAI API to build customized AI-assisted enterprise workflows.",
     ],
@@ -178,9 +117,9 @@ export const experience = [
     org: "EY — Ernst & Young",
     period: "Aug 2025 — Feb 2026",
     points: [
-      "Engineered automated data cleansing and transformation pipelines using Databricks (SQL/PySpark) and Alteryx Designer.",
+      "Engineered automated data cleansing and transformation pipelines using Databricks (SQL/PySpark) and Alteryx Designer for high-volume financial datasets.",
       "Developed audit-ready analytical models and reporting datasets, improving reliability and reducing manual intervention.",
-      "Acted as technical liaison between audit teams and clients, resolving complex data discrepancies under tight timelines.",
+      "Acted as technical liaison between audit teams and clients, resolving complex data discrepancies under strict timelines.",
     ],
   },
   {
@@ -217,26 +156,50 @@ export const experience = [
 
 export const education = [
   {
-    degree: "MSc Computer Science — Data Analysis",
+    k: "2019 — 2021",
+    title: "MSc Computer Science — Data Analysis",
     org: "Cochin University of Science & Technology (CUSAT)",
-    period: "2019 — 2021",
-    note: "Data Mining · Statistical Analysis · Machine Learning · Data Visualization (Python, SQL, Tableau)",
+    meta: "Data Mining · Statistical Analysis · ML · Data Visualization",
   },
   {
-    degree: "BCA — Computer Applications",
+    k: "2016 — 2019",
+    title: "BCA — Computer Applications",
     org: "Kerala University",
-    period: "2016 — 2019",
-    note: "",
+    meta: "Bachelor of Computer Applications",
   },
 ];
 
-export const certifications = ["Alteryx Designer Core Certified"];
+// FDE-flavoured working method.
+export const process = [
+  { no: "01", title: "Discover", desc: "Embed with stakeholders to understand the problem, users, and data before a line of code." },
+  { no: "02", title: "Architect", desc: "Model the data, design the APIs, and plan a structure that scales in production." },
+  { no: "03", title: "Build", desc: "Ship clean, responsive interfaces backed by reliable services and integrations." },
+  { no: "04", title: "Deploy & refine", desc: "Deploy into the client environment, measure, automate, and polish until it's effortless." },
+];
 
-export const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#approach", label: "Approach" },
-  { href: "#skills", label: "Skills" },
-  { href: "#work", label: "Work" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+// Skills — exactly as grouped on the resume.
+export const capabilities = [
+  { no: "A", title: "Languages", items: ["Python", "JavaScript", "SQL"] },
+  { no: "B", title: "Frameworks & Libraries", items: ["Django", "Django REST", "React.js", "Next.js", "TailwindCSS", "ShadCN"] },
+  { no: "C", title: "Databases & Platforms", items: ["PostgreSQL", "MySQL", "MongoDB", "Databricks", "Apache Spark", "Supabase"] },
+  { no: "D", title: "Tools & Integrations", items: ["Alteryx", "OpenAI API", "Clerk Auth", "Excel", "Shopify"] },
+];
+
+export const bgGlyphs = [
+  { text: "const dev = true;", left: "6%", top: "14%", size: "16px", rot: "-4deg", op: 0.16, dur: "9s" },
+  { text: "</>", left: "87%", top: "10%", size: "44px", rot: "8deg", op: 0.13, dur: "11s" },
+  { text: "{ }", left: "13%", top: "68%", size: "52px", rot: "-6deg", op: 0.11, dur: "13s" },
+  { text: "=> async ()", left: "69%", top: "78%", size: "16px", rot: "5deg", op: 0.15, dur: "10s" },
+  { text: "React", left: "40%", top: "8%", size: "18px", rot: "-3deg", op: 0.13, dur: "12s" },
+  { text: "Django", left: "80%", top: "40%", size: "18px", rot: "4deg", op: 0.13, dur: "9s" },
+  { text: "Python", left: "8%", top: "42%", size: "19px", rot: "-5deg", op: 0.15, dur: "14s" },
+  { text: "Next.js", left: "55%", top: "58%", size: "17px", rot: "6deg", op: 0.13, dur: "11s" },
+  { text: "0101 0011", left: "30%", top: "88%", size: "16px", rot: "-2deg", op: 0.12, dur: "10s" },
+  { text: "Databricks", left: "62%", top: "23%", size: "15px", rot: "3deg", op: 0.13, dur: "12s" },
+  { text: "PySpark", left: "22%", top: "30%", size: "16px", rot: "7deg", op: 0.13, dur: "13s" },
+  { text: "git push", left: "45%", top: "40%", size: "16px", rot: "-4deg", op: 0.13, dur: "9s" },
+  { text: "SQL", left: "90%", top: "66%", size: "19px", rot: "-6deg", op: 0.13, dur: "11s" },
+  { text: "return ()", left: "4%", top: "84%", size: "16px", rot: "5deg", op: 0.13, dur: "10s" },
+  { text: "API", left: "52%", top: "90%", size: "18px", rot: "-3deg", op: 0.13, dur: "12s" },
+  { text: "npm run dev", left: "73%", top: "92%", size: "15px", rot: "4deg", op: 0.13, dur: "13s" },
 ];

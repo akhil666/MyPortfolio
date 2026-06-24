@@ -1,99 +1,35 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import { motion } from "motion/react";
-import { assets } from "@/assets/assets";
-import { profile } from "../data/content";
-import { Icon } from "./Icons";
+import { about, profile } from "../data/content";
 
-const highlights = [
-  {
-    icon: "embed",
-    title: "Customer-facing",
-    text: "Comfortable in the room with stakeholders — translating fuzzy needs into shippable scope.",
-  },
-  {
-    icon: "layers",
-    title: "End-to-end",
-    text: "Frontend, backend, data, and deploy. I own problems from blank page to production.",
-  },
-  {
-    icon: "database",
-    title: "Data-fluent",
-    text: "MSc in CS (Data Analytics, CUSAT). I model data and build the pipelines around it.",
-  },
-];
-
-const About = () => {
+export default function About() {
   return (
-    <section id="about" className="section">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="text-center"
-      >
-        <p className="eyebrow">// About</p>
-        <h2 className="section-title mt-3">Engineer who ships next to the customer</h2>
-      </motion.div>
-
-      <div className="mt-16 grid items-start gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-        {/* portrait */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative mx-auto w-full max-w-sm"
-        >
-          <div className="absolute -inset-3 rounded-3xl bg-accent/10 blur-2xl" />
-          <Image
-            src={assets.user_image}
-            alt={profile.name}
-            className="relative w-full rounded-3xl border border-line object-cover"
-          />
-          <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-line bg-surface/90 px-4 py-3 backdrop-blur">
-            <p className="font-mono text-xs text-faint">// currently</p>
-            <p className="text-sm text-ink">{profile.status}</p>
+    <section id="about" data-reveal className="kp-section">
+      <div className="kp-section-head">
+        <span className="kp-section-no">01</span>
+        <h2 className="kp-h2" data-blur>About</h2>
+      </div>
+      <div className="kp-about-grid">
+        <div className="kp-avatar-wrap">
+          <div className="kp-avatar-ring" />
+          <div className="kp-avatar-dash" />
+          <div className="kp-avatar">
+            <img src="/profile-img.png" alt={profile.name} />
           </div>
-        </motion.div>
-
-        {/* copy */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          <p className="text-lg leading-relaxed text-muted">
-            {profile.summary}
+          <div className="kp-avatar-badge">4+ yrs exp</div>
+        </div>
+        <div>
+          <p className="kp-about-para" data-wordreveal>
+            {about.paragraph}
           </p>
-          <p className="mt-5 leading-relaxed text-muted">
-            I gravitate to the Forward Deployed model because I like being where
-            the problem is real — sitting with users, understanding the workflow,
-            and proving value with working software instead of slides. I move fast
-            without losing the rigor needed to run in production.
-          </p>
-
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            {highlights.map((h) => {
-              const I = Icon[h.icon];
-              return (
-                <div key={h.title} className="card p-5">
-                  <span className="grid h-10 w-10 place-items-center rounded-lg bg-accent-soft text-accent">
-                    <I width={20} height={20} />
-                  </span>
-                  <h3 className="mt-4 font-medium text-ink">{h.title}</h3>
-                  <p className="mt-1.5 text-sm text-muted">{h.text}</p>
-                </div>
-              );
-            })}
+          <div className="kp-rows" data-stagger>
+            {about.rows.map((r) => (
+              <div key={r.k} className="kp-row">
+                <span className="kp-row-k">{r.k}</span>
+                <span className="kp-row-v">{r.v}</span>
+              </div>
+            ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
-};
-
-export default About;
+}

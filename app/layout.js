@@ -1,56 +1,54 @@
-import { Outfit, Ovo, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, JetBrains_Mono, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const sans = Outfit({
+const space = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-sans",
-});
-
-const serif = Ovo({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-serif",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-space",
+  display: "swap",
 });
 
 const mono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500"],
   variable: "--font-mono",
+  display: "swap",
+});
+
+const hanken = Hanken_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-hanken",
+  display: "swap",
 });
 
 export const metadata = {
-  title: "Akhil S Vijay — Forward Deployed Engineer",
+  title: "Akhil S Vijay — Forward Deployment Engineer",
   description:
-    "Forward Deployed Engineer & full-stack/data engineer. I embed with customers and turn ambiguous, high-stakes problems into production systems — fast.",
+    "Forward Deployment Engineer & full-stack data professional. I deploy scalable web apps, AI-enabled platforms, and analytics solutions into client environments.",
   keywords: [
-    "Forward Deployed Engineer",
-    "FDE",
-    "Full Stack Engineer",
+    "Forward Deployment Engineer",
+    "Full Stack Developer",
     "Data Engineer",
     "Python",
     "Django",
     "React",
     "Next.js",
+    "Databricks",
     "Akhil S Vijay",
   ],
   openGraph: {
-    title: "Akhil S Vijay — Forward Deployed Engineer",
+    title: "Akhil S Vijay — Forward Deployment Engineer",
     description:
-      "I embed with customers and turn ambiguous, high-stakes problems into production systems — fast.",
+      "I deploy scalable web apps, AI-enabled platforms, and analytics solutions into client environments.",
     type: "website",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${sans.variable} ${serif.variable} ${mono.variable} scroll-smooth`}
-    >
-      <body className="font-sans antialiased overflow-x-hidden bg-bg text-ink">
-        {children}
-      </body>
+    <html lang="en" className={`${space.variable} ${mono.variable} ${hanken.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

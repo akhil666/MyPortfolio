@@ -1,54 +1,39 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { initPortfolioEffects } from "./lib/effects";
+import Preloader from "./components/Preloader";
+import Backdrop from "./components/Backdrop";
 import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import Stats from "./components/Stats";
+import Hero from "./components/Hero";
+import Facts from "./components/Facts";
 import About from "./components/About";
-import Approach from "./components/Approach";
-import Services from "./components/Services";
 import Work from "./components/Work";
 import Experience from "./components/Experience";
+import Process from "./components/Process";
+import Stack from "./components/Stack";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme:dark)").matches)
-    ) {
-      setIsDarkMode(true);
-    } else {
-      setIsDarkMode(false);
-    }
+    const cleanup = initPortfolioEffects();
+    return cleanup;
   }, []);
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.theme = "dark";
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.theme = "";
-    }
-  }, [isDarkMode]);
 
   return (
     <>
-      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <main>
-        <Header />
-        <Stats />
-        <About />
-        <Approach />
-        <Services />
-        <Work />
-        <Experience />
-        <Contact />
-      </main>
+      <div className="kp-progress"><span data-progress /></div>
+      <Preloader />
+      <Backdrop />
+      <Navbar />
+      <Hero />
+      <Facts />
+      <About />
+      <Work />
+      <Experience />
+      <Process />
+      <Stack />
+      <Contact />
       <Footer />
     </>
   );
