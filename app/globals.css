@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------------------------------------------------------
+   Design tokens — single source of truth for both themes.
+   Values are space-separated RGB triplets so Tailwind's
+   `rgb(var(--x) / <alpha-value>)` can apply opacity.
+-----------------------------------------------------------------*/
+:root {
+  --bg: 255 255 255;
+  --surface: 252 244 255; /* lightHover */
+  --elevated: 247 235 255;
+  --line: 233 213 255; /* soft violet */
+  --ink: 24 6 38; /* deep plum-black */
+  --muted: 92 70 112;
+  --faint: 146 124 168;
+  --accent: 124 58 237; /* violet-600 — AA on white */
+  --accent-2: 192 132 252;
+}
+
+.dark {
+  --bg: 17 0 31; /* darkTheme #11001F */
+  --surface: 29 8 49;
+  --elevated: 42 0 74; /* darkHover #2a004a */
+  --line: 62 30 96;
+  --ink: 241 234 252;
+  --muted: 182 162 206;
+  --faint: 134 110 168;
+  --accent: 192 132 252; /* purple-400 — pops on plum */
+  --accent-2: 124 58 237;
+}
+
+* {
+  border-color: rgb(var(--line));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--ink));
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Selection */
+::selection {
+  background: rgb(var(--accent) / 0.25);
+  color: rgb(var(--ink));
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--bg));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--line));
+  border-radius: 999px;
+  border: 2px solid rgb(var(--bg));
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--faint));
+}
+
+/* ----------------------------------------------------------------
+   Reusable component utilities
+-----------------------------------------------------------------*/
+@layer components {
+  .section {
+    @apply w-full px-5 sm:px-[6%] lg:px-[8%] py-20 sm:py-28 scroll-mt-20;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs sm:text-sm tracking-widest uppercase text-accent;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tight text-ink;
+  }
+
+  .text-gradient {
+    background-image: linear-gradient(
+      120deg,
+      rgb(var(--ink)),
+      rgb(var(--accent))
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-surface;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-elevated px-3 py-1 font-mono text-xs text-muted;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3 text-sm font-medium text-bg transition hover:opacity-90 hover:shadow-glow;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-line bg-transparent px-7 py-3 text-sm font-medium text-ink transition hover:border-accent hover:text-accent;
+  }
+
+  .link-muted {
+    @apply text-muted transition hover:text-accent;
+  }
+}
+
+/* Animated dotted grid background for hero */
+.grid-bg {
+  background-image: radial-gradient(
+    rgb(var(--line)) 1px,
+    transparent 1px
+  );
+  background-size: 32px 32px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+.accent-glow {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgb(var(--accent) / 0.18),
+    transparent 60%
+  );
+}
